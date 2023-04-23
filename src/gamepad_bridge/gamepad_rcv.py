@@ -16,6 +16,9 @@ class GamepadReceiver:
     except pickle.UnpicklingError:
       print("Unpickling error")
       return
+    except EOFError:
+      print("EOF error")
+      return
     # ensure type of joy
     if not isinstance(joy, Joy):
       print("Not Joy")
