@@ -224,7 +224,9 @@ def main(args):
     #valid device
     device = hid.device()
     device.open(controller_vendor, controller_id)
+    # device.darwin_set_open_exclusive(0)
     device.set_nonblocking(True)
+
     return device
   
 
